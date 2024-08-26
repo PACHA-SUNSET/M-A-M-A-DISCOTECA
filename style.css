@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: black; /* Fondo negro para toda la página */
+  color: white; /* Color del texto */
+  margin: 0;
+  padding: 0;
+  */
+}
+
+p {
+  margin: 16px; /* Espaciado entre párrafos */
+}
