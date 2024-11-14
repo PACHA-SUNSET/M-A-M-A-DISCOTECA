@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAMA DISCOTECA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <img src="WhatsApp_Image_2024-10-28_at_11.42.29-removebg-preview.png" alt="Encabezado" class="header-image">
+    <div class="container">
+        <div class="area lounge">
+            <div class="mesas" id="lounge-container"></div>
+            <div class="label">Lounge</div>
+        </div>
+        <div class="area mama">
+            <div class="mesas" id="mama-container"></div>
+            <div class="label">Mama</div>
+        </div>
+    </div>
+    <div class="area camel">
+        <div class="stickers" id="camel-container"></div>
+        <div class="label">Camel</div>
+    </div>
+    <div id="top-left-sticker">
+        <img src="https://img.icons8.com/?size=100&id=52946&format=png&color=000000" alt="menu" />
+    </div>
+
+    <div id="side-menu" class="side-menu">
+        <img src="WhatsApp_Image_2024-10-28_at_11.42.29-removebg-preview.png" alt="Menú" style="width: 100%; height: auto;">
+        <ul>
+            <li id="opcion-1">
+                <img src="frequency.png" alt="Ícono de mesa" style="width: 45px; height: 45px; vertical-align: middle;">
+                Registro de mesas
+            </li>
+
+               <li id="enviar-correo">
+                   <img src="https://img.icons8.com/?size=100&id=qbiAUnUMOnLp&format=png&color=000000" alt="Enviar por correo" style="width: 45px; height: 45px; vertical-align: middle;">
+                   Enviar por correo
+               </li>
+
+        </ul>
+    </div>
+
+   <!-- Modal para mostrar detalles -->
+   <div id="modal" class="modal">
+       <div class="modal-content">
+           <span id="close-modal" class="close">&times;</span>
+           <h3 id="total-nombre-title" style="display: none;">Total por Nombre</h3>
+           <table class="table" id="nombre-table">
+               <thead>
+                   <tr>
+                       <th>Cuenta</th>
+                       <th>Monto Depositado (bs)</th>
+                   </tr>
+               </thead>
+               <tbody id="total-nombre-container"></tbody>
+           </table>
+
+           <div id="count-container"></div>
+           <div id="total-container"></div>
+       </div>
+   </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

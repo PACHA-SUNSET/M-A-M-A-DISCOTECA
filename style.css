@@ -1,13 +1,642 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
-  background-color: black; /* Fondo negro para toda la página */
-  color: white; /* Color del texto */
-  margin: 0;
-  padding: 0;
-  */
+  font-family: 'Walter Turncoat', cursive;
+  text-align: center;
+  background-color: black;
+   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgb(20, 255, 251, 0.5), rgb(20, 255, 251, 0.5), rgb(20, 255, 251, 0.5), rgb(20, 255, 251, 0.3), rgb(20, 255, 251, 0.5), rgb(20, 255, 251, 0.5), rgba(0, 0, 0, 0.8)); /* Gradiente lineal */
+  color: #39FF14; /* Texto verde neón */
+}
+.button:hover {
+  background-color: #39FF14; /* Cambia a verde neón al pasar el ratón */
+}
+.header-image {
+    width: 29%; /* Ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Para eliminar espacios en línea */
+  margin: -30px auto 0; /* Sube la imagen ajustando el margen superior */
+
+}
+h1 {
+  color: #fff; /* Cambiar a blanco para contrastar con el fondo negro */
+}
+.container {
+  display: flex;
+  justify-content: center; /* Centrar el contenido */
+  margin-bottom: 20px;
+}
+.area {
+  width: 30%; /* Mantener el ancho original */
+  padding: 19px;
+  margin: 0 40px; /* Ajustar el margen entre áreas */
+}
+.camel {
+  margin-top: 20px; /* Espacio superior para separar de las áreas superiores */
+  width: 30%; /* Mantener el mismo ancho que las áreas de arriba */
+  padding: 10px; /* Relleno */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+.mesas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sticker {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative; /* Necesario para posicionar el número */
+}
+.sticker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sticker-number {
+  position: absolute; /* Posicionar el número */
+  top: 0px; /* Ajustar la posición según necesites */
+  left: 50px; /* Ajustar la posición según necesites */
+  transform: translateX(-50%); /* Para centrarlo exactamente */
+  color: black; /* Color del número */
+  font-weight: bold; /* Negrita */
+  background-color:darkgreen; /* Fondo semitransparente */
+  padding: 2px 5px; /* Relleno para el fondo */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+.sticker-quantity {
+    position: absolute;
+    top: 40px; /* Ajusta esta posición según necesites */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Para centrarlo exactamente */
+    color: black;
+    font-weight: bold;
+    background-color:black; /* Fondo semitransparente */
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.sticker-name {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición según necesites */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Para centrarlo exactamente */
+    color: white;
+    font-weight: bold;
+    background-color: violet; /* Fondo semitransparente */
+    padding: 2px 5px;
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+}
+#top-left-sticker {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  left: 10px; /* Ajusta la distancia desde la izquierda */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  width: 50px; /* Ajusta el ancho a 50px (cambia este valor según necesites) */
+}
+#top-left-sticker img {
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+h1 {
+  color:black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.area {
+  width: 35%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 35px;
+  outline: 2px solid black;
+}
+.camel {
+  margin-top: 20px;
+  width: 35%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  outline: 2px solid black; 
+}
+.stickers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sticker {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
 }
 
-p {
-  margin: 16px; /* Espaciado entre párrafos */
+.sticker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sticker-number {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, rgba(18, 18, 18, 1), rgba(0, 0, 0, 0.8));
+  padding: 2px 5px;
+  border: 1px solid gray;
+   outline: 2px solid black; 
+}
+
+.sticker-quantity {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #30d614;
+  font-weight: bold;
+  padding: 0; /* Cambiar a 0 para eliminar cualquier espacio */
+  border-radius: 0; /* Cambiar a 0 si no quieres esquinas redondeadas */
+  background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+}
+
+
+.sticker-name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color:white ;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, rgba(18, 18, 18, 1), rgb(142, 47, 47, 0.8));
+  padding: 2px 5px;
+  border-radius: 5px;
+  display: none;
+}
+
+#top-left-sticker {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  width: 50px;
+}
+
+#top-left-sticker img {
+  width: 100%;
+  height: auto;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0; /* Puedes ajustar esto según sea necesario */
+  width: 250px;
+  height: 90%;
+  background-color: rgb(0, 0, 0, 0.9); /* Color atractivo */
+  color: white;
+  padding: 20px;
+  transition: transform 0.9s ease; /* Transición suave */
+  z-index: 1001;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  border-radius: 10px; /* Esquinas redondeadas en todas las esquinas */
+  transform: translateY(-100%); /* Inicialmente fuera de la vista hacia arriba */
+}
+
+.side-menu.open {
+  transform: translateY(0); /* Mover hacia abajo a su posición original */
+}
+
+.side-menu h2 {
+  margin-top: 0;
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 10px 0;
+}
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Asegúrate de que esté en la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    color: white; /* Color de texto blanco */
+}
+
+/* Contenedor del modal con contenido desplazable */
+.modal-content {
+    background: linear-gradient(to right, #0a0a0a, black, black, #080808); /* Degradado */
+    margin: 4% auto; /* Margen para centrar */
+    padding: 20px; /* Espaciado interno */
+    color: white; /* Color de texto blanco */
+    width: 80%; /* Ancho del modal */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid white; /* Borde blanco */
+    text-align: center; /* Centrar el contenido */
+    max-height: 80vh; /* Establece una altura máxima */
+    overflow-y: auto; /* Permite el desplazamiento vertical dentro del modal */
+    padding-right: 15px; /* Espacio extra para la barra de desplazamiento */
+}
+
+/* Estilo para la X de cierre del modal */
+.close {
+    color: #aaa; /* Color de la 'X' */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño de la 'X' */
+    font-weight: bold; /* Negrita */
+}
+
+/* Opcional: Personalización de la barra de desplazamiento */
+.modal-content::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Color de la barra de desplazamiento */
+    border-radius: 10px;
+    border: 2px solid #2c3e50; /* Borde alrededor de la barra */
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #2c3e50; /* Fondo de la pista */
+    border-radius: 10px;
+}
+
+/* Si se prefiere barras de desplazamiento más discretas en Firefox */
+.modal-content {
+    scrollbar-color: #3498db #2c3e50; /* Color de la barra y pista en Firefox */
+    scrollbar-width: thin; /* Barra de desplazamiento más delgada */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cursor de mano */
+}
+
+
+/* Estilos para los totales */
+#total-container, #total-nombre-container, #count-container {
+    margin-top: 20px; /* Espacio superior */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos de tabla */
+.table {
+  color: white; /* Color de texto blanco */
+  width: 85%; /* Ancho del 85% */
+  border-collapse: collapse; /* Colapsar bordes */
+  margin: 10px auto; /* Espacio superior y centrar horizontalmente */
+  background-color: black; /* Color de fondo general */
+  border-radius: 19px; /* Esquinas redondeadas */
+  overflow: hidden; /* Para asegurar que el borde redondeado se aplique correctamente */
+}
+
+
+
+.table th, .table td {
+  border: 5px solid white; /* Bordes de las celdas en blanco */
+  padding: 8px; /* Espaciado interno */
+  background-color: black; /* Color de fondo negro para celdas */
+  color: white; /* Color de texto blanco */
+
+}
+
+/* Estilo para encabezados */
+.table th {
+  background-color: black; /* Fondo de encabezado negro */
+  color: white; /* Color de texto blanco */
+}
+/* Alinear encabezados */
+.table th:nth-child(1) {
+  text-align: left; /* Alinear "Cuenta" a la izquierda */
+}
+
+.table th:nth-child(2) {
+  text-align: right; /* Alinear "Monto Depositado" a la derecha */
+}
+
+/* Alinear celdas */
+.table td:nth-child(1) {
+  text-align: left; /* Alinear nombres a la izquierda */
+}
+
+.table td:nth-child(2) {
+  text-align: right; /* Alinear montos a la derecha */
+}
+#side-menu ul li img {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 740px) {
+  .container {
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra el contenido */
+  }
+  .area, .camel {
+    width: 90%; /* Ancho adecuado para móviles */
+    margin: 25px auto; /* Espaciado entre áreas y centrado */
+  }
+  .header-image {
+    width: 80%; /* Ajusta el tamaño de la imagen */
+    margin-top: 20px; /* Ajusta el margen superior para bajar la imagen */
+  }
+  .sticker {
+    position: relative; /* Asegúrate de que el sticker tenga posición relativa */
+    width: 80px;
+    height: 80px;
+    overflow: visible; /* Permite que el contenido sobresalga */
+  }
+
+  .sticker-number {
+    top: 0; /* Ajusta a 0 para evitar corte */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+
+  .sticker-quantity {
+    top: 30px; /* Ajusta la posición del número de cantidad */
+    color: #30d614; /* Color amarillo */
+    font-size: 12px; /* Ajusta este valor para cambiar el tamaño del número */
+  }
+
+  .porcentaje-container {
+    width: 90%; /* Ancho para dispositivos móviles */
+    padding: 15px; /* Espaciado interno reducido */
+    margin: 20px auto; /* Margen centrado */
+  }
+
+  .porcentaje-area {
+    flex-direction: column; /* Cambia a columna para apilar elementos */
+    align-items: center; /* Centra los elementos */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+
+  .porcentaje-circle {
+    width: 60px; /* Tamaño reducido para móviles */
+    height: 60px; /* Tamaño reducido para móviles */
+    font-size: 1em; /* Tamaño de fuente reducido */
+  }
+
+  /* Ajustes para las tarjetas en móviles */
+  .card {
+    width: 90%; /* Asegura que las tarjetas ocupen un buen ancho */
+    margin: 8px auto; /* Espaciado entre tarjetas */
+    padding: 10px; /* Reduce el espaciado interno */
+    position: relative; /* Si necesitas ajustar algo más con top */
+  }
+
+  .card-title {
+    font-size: 1.1em; /* Ajusta el tamaño del título */
+  }
+
+  .card-value {
+    font-size: 1.3em; /* Ajusta el tamaño del valor */
+  }
+
+  .card-credit {
+      width: 90%; /* Asegura que la tarjeta ocupe un buen ancho */
+      height: auto; /* Permite que la altura se ajuste automáticamente */
+      padding: 15px; /* Reduce el espaciado interno */
+      margin: 40px 0 40px 40%; /* Margen superior e inferior, margen izquierdo ajustado */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+      text-align: left; /* Alinear texto a la izquierda */
+    left: -16px;
+  }
+
+  .card-credit h2 {
+    font-size: 20px; /* Ajusta el tamaño del título para móviles */
+    top: 4px; /* Ajusta la posición vertical */
+  }
+
+  .card-credit .amount {
+    font-size: 28px; /* Ajusta el tamaño del monto */
+    bottom: 10px; /* Posición ajustada para móviles */
+  }
+
+  .card-credit .account-number {
+    font-size: 14px; /* Ajusta el tamaño del número de cuenta */
+    top: 10px; /* Ajusta la posición vertical */
+  }
+
+  .card-credit .total-label {
+    font-size: 16px; /* Ajusta el tamaño del total registrado */
+    top: 90px; /* Ajusta la posición vertical */
+  }
+  }
+
+#enviar-correo {
+  display: flex;
+  align-items: center;
+   outline: 2px solid #ffffff; 
+  padding-left: 0; /* Elimina el padding */
+  background-color: #1b242d;  /* Cambia el color de fondo a blanco */
+  color: #ffffff; /* Color del texto, ajustado para ser visible sobre fondo blanco */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el "botón" */
+  transition: background-color 0.3s; /* Efecto de transición al pasar el mouse */
+  margin: 10px; /* Margen blanco alrededor del botón */
+}
+
+#enviar-correo:hover {
+  background-color: #2980b9; /* Color al pasar el mouse */
+}
+#opcion-1 {
+  display: flex;
+  align-items: center;
+   outline: 2px solid #ffffff; 
+  padding-left: 0; /* Elimina el padding */
+  background-color: #1b242d;  /* Cambia el color de fondo a blanco */
+  color: #ffffff; /* Color del texto, ajustado para ser visible sobre fondo blanco */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el "botón" */
+  transition: background-color 0.3s; /* Efecto de transición al pasar el mouse */
+  margin: 10px; /* Margen blanco alrededor del botón */
+}
+
+#opcion-1:hover {
+  background-color: #e0e0e0; /* Color de fondo al pasar el mouse, ajusta según necesites */
+}
+
+
+#opcion-1:hover {
+  background-color: #95a5a6; /* Color gris más claro al pasar el mouse */
+}
+@keyframes lightSpeedIn {
+  0% { transform: translateX(100%) skewX(30deg); opacity: 0; }
+  60% { transform: skewX(-20deg); opacity: 1; }
+  100% { transform: translateX(0); }
+}
+.modal.show {
+  animation: lightSpeedIn 1.2s;
+}
+@keyframes lightSpeedOut {
+  0% { transform: translateX(0); opacity: 1; }
+  60% { transform: skewX(20deg); opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+.modal.hide {
+  animation: lightSpeedOut 1.7s forwards; /* "forwards" mantiene el estado final */
+}
+.card {
+  background: linear-gradient(135deg, white 50%, #e47711 50%);
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+  padding: 20px; /* Espaciado interno */
+  position: relative; /* Asegúrate de que el elemento tenga posición relativa */
+  top: -4px; /* Ajusta este valor para subir el card */
+}
+
+.otros-montos-list {
+  display: none; /* Ocultar por defecto */
+  overflow: hidden; /* Evitar que el contenido sobresalga */
+  transition: max-height 1.3s ease; /* Transición suave */
+  max-height: 0; /* Altura máxima inicial */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column; /* Organizar el contenido verticalmente */
+  align-items: flex-start; /* Alinear el contenido al inicio */
+
+}
+
+.card-title {
+  font-weight: bold; /* Negrita para el título */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  color: #333; /* Color del texto */
+}
+
+.card-value {
+  font-size: 1.5em; /* Tamaño de fuente más grande para el valor */
+  color: #007bff; /* Color del texto para el valor */
+  margin-top: 5px; /* Espaciado superior */
+}
+.card-container {
+  display: flex; /* Usar flexbox para organizar las tarjetas en línea */
+  justify-content: space-around; /* Espacio uniforme entre las tarjetas */
+  flex-wrap: wrap; /* Permitir que las tarjetas se muevan a la siguiente línea si no hay suficiente espacio */
+  margin: 20px; /* Espacio alrededor del contenedor */
+}
+.porcentaje-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 20px 0; /* Margen superior e inferior */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+.porcentaje-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.porcentaje-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 7px solid #2f1313; /* Color de fondo del círculo */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9em;
+  color: #333;
+
+}
+.porcentaje-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip-path: inset(0 50% auto 0);
+  background: conic-gradient(
+      #ce8027 var(--porcentaje), /* Color ocupado */
+      #0a0a0a var(--porcentaje) 100% /* Color no ocupado */
+  );
+}
+.card-credit {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  height: 150px; /* Asegúrate de que la tarjeta tenga suficiente altura */
+  position: relative; /* Necesario para posicionar elementos internos */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: left; /* Alinear texto a la izquierda */
+  margin: 20px auto;
+}
+
+.card-credit h2 {
+  font-size: 24px;
+  margin: 0; /* Eliminar el margen para un ajuste más preciso */
+  color:#ffffff;
+  position: absolute; /* Asegúrate de que esté posicionado absolutamente */
+  top: 4px; /* Ajusta este valor hacia arriba */
+  left: 10px; /* Mantener distancia desde la izquierda */
+}
+
+
+.card-credit .amount {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e67e22;
+  position: absolute; /* Posición absoluta */
+  bottom: 10px; /* Distancia desde el fondo */
+  left: 10px; /* Distancia desde la izquierda */
+}
+
+.card-credit .account-number {
+  font-size: 16px;
+  color: #ffffff;
+  position: absolute; /* Posición absoluta */
+  top: 10px; /* Distancia desde la parte superior */
+  right: 10px; /* Distancia desde la derecha */
+}
+.card-credit .total-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e67e22;
+  position: absolute; /* Posición absoluta */
+  top: 110px; /* Distancia desde la parte superior */
+  left: 10px; /* Distancia desde la izquierda */
+}
+/* Define la clase para el mensaje */
+.total-message {
+  margin-top: 30px; /* Espacio superior */
+  text-align: left; /* Alineación a la izquierda */
+  font-size: 25px; /* Tamaño de la fuente */
+  color: #ffffff; /* Color del texto */
+  width: 50%; /* Asegura que el mensaje ocupe todo el ancho del contenedor */
+  display: block; /* Esto asegura que el div se muestre como un bloque, tomando todo el espacio horizontal */
 }
